@@ -4,6 +4,7 @@
 
 ## Quickstart
 Typically, `simplegoal` prompts you to define goal in **two steps** as following:
+
 1. Define the **master goal** (long term process).
 ```shell
 simplegoal add [goal] [modifiers]
