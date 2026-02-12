@@ -3,8 +3,9 @@ from datetime import datetime
 
 
 @dataclasses.dataclass
-class AddGoalInputBound:
+class ViewGoalOutputBound:
+    goal_id: str
     name: str
     started_at: datetime
     due: datetime
-    
+    number_of_steps: int

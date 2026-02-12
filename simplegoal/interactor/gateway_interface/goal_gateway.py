@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from typing import List
 
 from simplegoal.entity.completed_goal import CompletedGoal
 from simplegoal.entity.goal import Goal
@@ -6,6 +7,10 @@ from simplegoal.entity.goal import Goal
 
 class GoalGateway(ABC):
     """Interface for basic goal gateway"""
+
+    @abstractmethod
+    def get_all(self) -> List[Goal]:
+        """Return all goals"""
 
     @abstractmethod
     def save(self, goal: Goal):
