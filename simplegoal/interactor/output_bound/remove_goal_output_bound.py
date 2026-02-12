@@ -1,10 +1,10 @@
 import dataclasses
-from abc import ABC
-
-from simplegoal.interactor.output_bound.presenter import Presenter
+from datetime import datetime
 
 
 @dataclasses.dataclass
 class RemoveGoalOutputBound:
+    succeed: bool
     removed_goal_id: str
     removed_goal_name: str
+    removed_goal_started_at: datetime

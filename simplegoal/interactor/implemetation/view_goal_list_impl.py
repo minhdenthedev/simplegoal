@@ -13,8 +13,7 @@ class ViewGoalListImpl(ViewGoalList):
     goal_gateway: GoalGateway
     presenter: ViewGoalListPresenter
 
-    def execute(self) -> ViewGoalListOutputBound:
-
+    def execute(self):
         goals = self.goal_gateway.get_all()
         answers: List[ViewGoalOutputBound] = [
             ViewGoalOutputBound(
@@ -22,7 +21,8 @@ class ViewGoalListImpl(ViewGoalList):
                 goal.name,
                 goal.started_at,
                 goal.due,
-                goal.num_steps()
+                goal.num_steps(),
+                goal.is_due()
             )
             for goal in goals
         ]

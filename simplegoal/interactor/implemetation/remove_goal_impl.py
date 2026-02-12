@@ -1,4 +1,5 @@
 import dataclasses
+from datetime import datetime
 
 from simplegoal.interactor.gateway_interface.goal_gateway import GoalGateway
 from simplegoal.interactor.input_bound.remove_goal_input_bound import RemoveGoalInputBound
@@ -14,8 +15,13 @@ class RemoveGoalImpl(RemoveGoal):
 
     def execute(self, request: RemoveGoalInputBound):
         goal_id = request.goal_id
-        removed_goal = self.goal_gateway.delete(goal_id)
-        output_bound = RemoveGoalOutputBound(
-            goal_id, removed_goal.name
-        )
+        try:
+            removed_goal = self.goal_gateway.delete(goal_id)
+            output_bound = RemoveGoalOutputBound(
+                True, goal_id, removed_goal.name, removed_goal.started_at
+            )
+        except Exception as e:
+            output_bound = RemoveGoalOutputBound(
+                False, goal_id, "", datetime(0, 0, 0)
+            )
         self.presenter.present(output_bound)

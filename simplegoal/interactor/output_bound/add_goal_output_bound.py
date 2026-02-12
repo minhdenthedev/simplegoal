@@ -4,6 +4,7 @@ from datetime import datetime
 
 @dataclasses.dataclass
 class AddGoalOutputBound:
+    succeed: bool
     added_goal_id: str
     added_goal_name: str
     added_goal_due: datetime

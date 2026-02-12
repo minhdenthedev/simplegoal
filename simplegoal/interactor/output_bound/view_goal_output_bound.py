@@ -9,3 +9,4 @@ class ViewGoalOutputBound:
     started_at: datetime
     due: datetime
     number_of_steps: int
+    is_due: bool

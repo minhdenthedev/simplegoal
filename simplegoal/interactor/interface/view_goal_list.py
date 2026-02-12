@@ -5,5 +5,5 @@ from simplegoal.interactor.output_bound.view_goal_list_output_bound import ViewG
 
 class ViewGoalList(ABC):
     @abstractmethod
-    def execute(self) -> ViewGoalListOutputBound:
+    def execute(self):
         pass

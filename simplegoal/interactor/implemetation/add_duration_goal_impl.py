@@ -27,8 +27,13 @@ class AddDurationGoalImpl(AddDurationGoal):
             timedelta(milliseconds=0),
             request.target_duration
         )
-        self.goal_gateway.save(goal)
-        output_bound = AddDurationGoalOutputBound(
-            goal_id, goal.name, goal.target_duration
-        )
+        try:
+            self.goal_gateway.save(goal)
+            output_bound = AddDurationGoalOutputBound(
+                True, goal_id, goal.name, goal.target_duration
+            )
+        except Exception:
+            output_bound = AddDurationGoalOutputBound(
+                False, goal_id, goal.name, goal.target_duration
+            )
         self.presenter.present(output_bound)
