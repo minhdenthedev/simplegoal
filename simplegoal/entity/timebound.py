@@ -7,7 +7,7 @@ class TimeBound(ABC):
 
     @abstractmethod
     def is_due(self) -> bool:
-        """Check if current time has exceed the due"""
+        """Check if current time has exceeded the due"""
 
     @abstractmethod
     def get_due(self) -> datetime:
