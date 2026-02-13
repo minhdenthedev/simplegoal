@@ -1,6 +1,8 @@
 import dataclasses
 
-from simplegoal.interactor.input_bound.add_goal_input_bound import AddGoalInputBound
+from simplegoal.interactor.input_bound.add_goal_input_bound import (
+    AddGoalInputBound,
+)
 
 
 @dataclasses.dataclass

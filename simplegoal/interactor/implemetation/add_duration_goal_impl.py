@@ -3,12 +3,17 @@ import uuid
 from datetime import timedelta
 
 from simplegoal.entity.duration_goal import DurationGoal
-from simplegoal.entity.goal import Goal
 from simplegoal.interactor.gateway_interface.goal_gateway import GoalGateway
-from simplegoal.interactor.input_bound.add_duration_goal_input_bound import AddDurationGoalInputBound
+from simplegoal.interactor.input_bound.add_duration_goal_input_bound import (
+    AddDurationGoalInputBound,
+)
 from simplegoal.interactor.interface.add_duration_goal import AddDurationGoal
-from simplegoal.interactor.output_bound.add_duration_goal_output_bound import AddDurationGoalOutputBound
-from simplegoal.interactor.presenter_interface.add_goal_presenter import AddGoalPresenter
+from simplegoal.interactor.output_bound.add_duration_goal_output_bound import (
+    AddDurationGoalOutputBound,
+)
+from simplegoal.interactor.presenter_interface.add_goal_presenter import (
+    AddGoalPresenter,
+)
 
 
 @dataclasses.dataclass
@@ -25,7 +30,7 @@ class AddDurationGoalImpl(AddDurationGoal):
             request.name,
             [],
             timedelta(milliseconds=0),
-            request.target_duration
+            request.target_duration,
         )
         try:
             self.goal_gateway.save(goal)

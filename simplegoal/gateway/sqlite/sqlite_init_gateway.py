@@ -14,8 +14,9 @@ class SqliteInitGateway(InitGateway):
 
     def init_db(self):
         conn = sqlite3.connect(self.data_path)
-        with resources.files("simplegoal.resources.sqlite") \
-                .joinpath("init_db.sql").open() as f:
+        with resources.files("simplegoal.resources.sqlite").joinpath(
+            "init_db.sql"
+        ).open() as f:
             sql = f.read()
 
         conn.executescript(sql)

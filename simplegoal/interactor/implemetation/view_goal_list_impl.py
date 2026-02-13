@@ -3,9 +3,16 @@ from typing import List
 
 from simplegoal.interactor.gateway_interface.goal_gateway import GoalGateway
 from simplegoal.interactor.interface.view_goal_list import ViewGoalList
-from simplegoal.interactor.output_bound.view_goal_list_output_bound import ViewGoalListOutputBound
-from simplegoal.interactor.output_bound.view_goal_output_bound import ViewGoalOutputBound
-from simplegoal.interactor.presenter_interface.view_goal_list_presenter import ViewGoalListPresenter
+from simplegoal.interactor.output_bound.view_goal_list_output_bound import (
+    ViewGoalListOutputBound,
+)
+from simplegoal.interactor.output_bound.view_goal_output_bound import (
+    ViewGoalOutputBound,
+)
+from simplegoal.interactor.presenter_interface\
+    .view_goal_list_presenter import (
+    ViewGoalListPresenter,
+)
 
 
 @dataclasses.dataclass
@@ -22,7 +29,7 @@ class ViewGoalListImpl(ViewGoalList):
                 goal.started_at,
                 goal.due,
                 goal.num_steps(),
-                goal.is_due()
+                goal.is_due(),
             )
             for goal in goals
         ]

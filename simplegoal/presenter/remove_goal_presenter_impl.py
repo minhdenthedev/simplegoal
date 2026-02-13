@@ -1,7 +1,11 @@
 import dataclasses
 
-from simplegoal.interactor.output_bound.remove_goal_output_bound import RemoveGoalOutputBound
-from simplegoal.interactor.presenter_interface.remove_goal_presenter import RemoveGoalPresenter
+from simplegoal.interactor.output_bound.remove_goal_output_bound import (
+    RemoveGoalOutputBound,
+)
+from simplegoal.interactor.presenter_interface.remove_goal_presenter import (
+    RemoveGoalPresenter,
+)
 from simplegoal.view.remove_goal_view import RemoveGoalView
 
 

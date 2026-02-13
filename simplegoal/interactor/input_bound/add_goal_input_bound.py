@@ -7,4 +7,3 @@ class AddGoalInputBound:
     name: str
     started_at: datetime
     due: datetime
-    

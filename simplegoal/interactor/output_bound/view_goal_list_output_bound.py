@@ -1,8 +1,9 @@
 import dataclasses
-from abc import ABC
 from typing import List
 
-from simplegoal.interactor.output_bound.view_goal_output_bound import ViewGoalOutputBound
+from simplegoal.interactor.output_bound.view_goal_output_bound import (
+    ViewGoalOutputBound,
+)
 
 
 @dataclasses.dataclass

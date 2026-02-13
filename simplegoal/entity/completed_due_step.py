@@ -3,7 +3,6 @@ from datetime import datetime, timedelta
 
 from simplegoal.entity.due_step import DueStep
 from simplegoal.entity.completable import Completable
-from simplegoal.entity.timebound import TimeBound
 
 
 @dataclass

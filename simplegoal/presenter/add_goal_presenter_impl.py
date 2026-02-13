@@ -1,7 +1,11 @@
 import dataclasses
 
-from simplegoal.interactor.output_bound.add_goal_output_bound import AddGoalOutputBound
-from simplegoal.interactor.presenter_interface.add_goal_presenter import AddGoalPresenter
+from simplegoal.interactor.output_bound.add_goal_output_bound import (
+    AddGoalOutputBound,
+)
+from simplegoal.interactor.presenter_interface.add_goal_presenter import (
+    AddGoalPresenter,
+)
 from simplegoal.view.add_goal_view import AddGoalView
 
 
